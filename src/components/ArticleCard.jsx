@@ -1,6 +1,12 @@
-import React from 'react'
+import { useState } from 'react'
 
-export default function ArticleCard({article}) {
+export default function ArticleCard({article, handleDelete}) {
+  
+  const [likes, setLikes] = useState(0)
+  
+
+
+  
   return (
     <div className="card bg-base-100 w-full shadow-xl m-4">
         <div className="card-body">
@@ -11,8 +17,11 @@ export default function ArticleCard({article}) {
             </div>
 
             <div className="card-actions justify-between items-center">
-                <span className="cursor-pointer">❤️</span>
-                <button className="btn btn-error text-white">Delete</button>
+                <span onClick={() => setLikes(likes + 1) } 
+                className="cursor-pointer">{likes} ❤️</span>
+                <button 
+                  onClick={()=>handleDelete(article.id)}
+                  className="btn btn-error text-white">Delete</button>
 
             </div>
         </div>
