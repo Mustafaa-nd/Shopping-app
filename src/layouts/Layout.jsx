@@ -5,7 +5,7 @@ export default function Layout() {
     <>
         <div className="navbar bg-base-100">
         <div className="flex-1">
-            <a className="btn btn-ghost text-xl">Blog</a>
+            <a className="btn btn-ghost text-xl">Products</a>
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
@@ -13,7 +13,7 @@ export default function Layout() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/create">Create</Link>
+                    <Link to="/create">Add Product</Link>
                 </li>
             </ul>
         </div>
